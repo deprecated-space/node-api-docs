@@ -2,9 +2,9 @@
 
 ## path.basename(path[, ext])
 
-- path <string>
-- ext <string> 文件扩展名
-- Returns: <string>
+- path \<string>
+- ext \<string> 文件扩展名
+- Returns: \<string>
 
 返回路径的最后一部分
 
@@ -17,8 +17,8 @@ console.log(path.basename('a/index.htm', '.htm')) // index
 
 ## path.dirname(path)
 
-- path <string>
-- Returns: <string>
+- path \<string>
+- Returns: \<string>
 
 返回路径所在的目录（感觉是 path.basename() 的补集）
 
@@ -31,8 +31,8 @@ console.log(path.dirname('a/b/c/d.htm/')) // a/b/c
 
 ## path.extname(path)
 
-- path <string>
-- Returns: <string>
+- path \<string>
+- Returns: \<string>
 
 返回该路径所指向文件的扩展名，如果没有，则返回空串
 
@@ -46,8 +46,8 @@ console.log(path.extname('a/.index')) // ''
 
 ## path.join([...paths])
 
-- ...paths <string> 
-- Returns: <string>
+- ...paths \<string> 
+- Returns: \<string>
 
 将多个路径组合成一个路径
 
@@ -58,8 +58,8 @@ console.log(path.join('a', '/b', '..')) // a
 
 ## path.parse(path)
 
-- path <string>
-- Returns: <Object>
+- path \<string>
+- Returns: \<Object>
 
 解析路径
 
@@ -74,8 +74,8 @@ path.parse() 的相反操作，详见文档
 
 ## path.normalize(path)
 
-- path <string>
-- Returns: <string> 
+- path \<string>
+- Returns: \<string> 
 
 将路径规范化，解析路径中的 `..` 以及 `.`
 
@@ -85,9 +85,9 @@ console.log(path.normalize('a/b/c/.././d.js')) // a/b/d.js
 
 ## path.relative(from, to)
 
-- from <string>
-- to <string>
-- Returns: <string>
+- from \<string>
+- to \<string>
+- Returns: \<string>
 
 求解两个路径之间的相对路径，即路径 `from` 经过何种操作可以到达路径 `to`
 
@@ -97,8 +97,8 @@ console.log(path.relative('/a', '/b')) // ../b
 
 ## path.resolve([...paths])
 
-- ...paths <string>
-- Returns: <string>
+- ...paths \<string>
+- Returns: \<string>
 
 相当于从左到右一直 cd，并返回一个 **绝对路径**。注意与 path.join() 的区别
 
@@ -108,8 +108,8 @@ console.log(path.resolve('a', '/b')) ; // /b
 
 ## path.isAbsolute(path)
 
-- path <string>
-- Returns: <boolean>
+- path \<string>
+- Returns: \<boolean>
 
 判断是否是绝对路径
 
