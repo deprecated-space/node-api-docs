@@ -112,7 +112,7 @@ console.log(params2); // user=abc&query=first&query=second
 
 - iterable \<Iterable> 任何 iterable object 
 
-相见 [文档](https://nodejs.org/dist/latest-v8.x/docs/api/url.html#url_constructor_new_urlsearchparams_iterable)
+详见 [文档](https://nodejs.org/dist/latest-v8.x/docs/api/url.html#url_constructor_new_urlsearchparams_iterable)
 
 #### urlSearchParams.append(name, value)
 
@@ -122,6 +122,8 @@ console.log(params2); // user=abc&query=first&query=second
 #### urlSearchParams.delete(name)
 
 - name \<string> 
+
+Remove all name-value pairs whose name is `name`
 
 #### urlSearchParams.get(name)
 
@@ -141,6 +143,8 @@ Returns the values of all name-value pairs whose name is `name`. If there are no
 
 - name \<string>
 - value \<string> 
+
+如果有名为 name 的 key，则改变其 value 值，然后删除余下的（如果还有）名为 name 的键值对；如果没有，则添加。
 
 ```javascript
 const { URLSearchParams } = require('url');
