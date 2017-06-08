@@ -145,7 +145,7 @@ myEmitter.emit('event'); // 被忽略
 - `eventName` \<any> 
 - `listener` \<Function>
 
-用 emiiter.on 注册的事件会被放到监听数组（listeners array）最后面，用 emitter.prependListener 可以放到最前面。
+用 emitter.on 注册的事件会被放到监听数组（listeners array）最后面，用 emitter.prependListener 可以将其放到最前面。
 
 ```javascript
 const myEmitter = new MyEmitter();
@@ -245,7 +245,7 @@ console.log(myEmitter.listenerCount('event')); // 2
 
 ### EventEmitter.defaultMaxListeners
 
-默认情况下，我们最多只能为一个 EventEmitter 实例下的一个 eventName 注册 10 个事件，再多就要报 warning，因为 EventEmitter.defaultMaxListeners 默认值为 10。我们可以手动将其开大，不过不建议这么做，这样会改变所有 EventEmitter 实例的最大监听数量。建议用 emitter.setMaxListeners() 方法修改单个 emitter 的默认值。
+默认情况下，我们最多只能为一个 EventEmitter 实例注册 10 个事件，再多就要报 warning，因为 EventEmitter.defaultMaxListeners 默认值为 10。我们可以手动将其开大，**不过不建议这么做**，这样会改变所有 EventEmitter 实例的最大监听数量。建议用 emitter.setMaxListeners() 方法修改单个 emitter 的默认值。
 
 ### emitter.setMaxListeners(n)
 
